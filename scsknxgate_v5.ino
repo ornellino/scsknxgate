@@ -4862,7 +4862,7 @@ if (sm_picprog == PICPROG_FREE)
     manualInput(prefix);
     prefix = 0;
 #endif
-    if ((prefix > 0xF0) && (prefix < 0xF9)) // 0xf5 y aa bb cc dd
+    if ((prefix > 0xF0) && (prefix < 0xFF)) // 0xf5 y aa bb cc dd   - Modified from 0xF9 to 0xFF to send also clima info report telegrams
     {
       internal = 1;
       lmax = (prefix & 0x0F);
